@@ -98,7 +98,8 @@ const startGame = () => {
     if(f) {
         s = [{ x: 320, y: 320 }];
         d = 'up';
-        generateFood();
+        //food = { x: getRandomArbitrary(1, 640), y: getRandomArbitrary(1, 640) };
+        //generateFood();
         moveSnake();
     }
 }

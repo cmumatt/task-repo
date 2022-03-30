@@ -147,7 +147,7 @@ const checkIfRotate = () => {
         return grid.squares[nr][nc] === -1;
     });
 }
-
+// TODO BUG HERE !!!
 const checkNoBlockCollision = () => {
     return fs.every(s => {
         let c = fsCol + ds[cd][0] + s[0];
@@ -241,11 +241,13 @@ window.addEventListener('keydown', (e) => {
         case 'ArrowLeft':
             cd = 'left';
             if(checkNoBlockCollision()) refresh();
+            cd ='down';
             break;
         case 'd':
         case 'ArrowRight':
             cd = 'right';
             if(checkNoBlockCollision()) refresh();
+            cd='down';
             break;
         }
 });
